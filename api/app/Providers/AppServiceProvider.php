@@ -1,5 +1,5 @@
 <?php
-
+//  Laravel 9 Migration Docs : https://laravel.com/docs/9.x/migrations#index-lengths-mysql-mariadb
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
