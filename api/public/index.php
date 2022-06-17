@@ -1,4 +1,9 @@
 <?php
+// https://www.youtube.com/watch?v=dyQLsQm1EtI
+
+// https://www.youtube.com/watch?v=_aj_adg1jeI
+
+//https://github.com/infodp/API_Laravel_9_REACT/blob/main/api/app/Http/Controllers/Api/ProductController.php
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
