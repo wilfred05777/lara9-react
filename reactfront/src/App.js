@@ -10,22 +10,24 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
-      {/* <Router>
+      <div className="app">
+        {/* <Router>
         <Routes>
           <Route exact path="/" element={<ShowProducts />} />
           <Route exact path="/create" element={<CreateProduct />} />
           <Route exact path="/edit/:id" element={<EditProduct />} />
         </Routes>
       </Router> */}
-      <ToastContainer />
-      {/* <button className="btn btn-primary">Create</button> */}
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<ShowProducts />} />
-          <Route exact path="/create" element={<CreateProduct />} />
-          <Route exact path="/edit/:id" element={<EditProduct />} />
-        </Routes>
-      </BrowserRouter>
+        {/* <button className="btn btn-primary">Create</button> */}
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<ShowProducts />} />
+            <Route exact path="/create" element={<CreateProduct />} />
+            <Route exact path="/edit/:id" element={<EditProduct />} />
+          </Routes>
+        </BrowserRouter>
+        <ToastContainer />
+      </div>
     </>
   );
 }
