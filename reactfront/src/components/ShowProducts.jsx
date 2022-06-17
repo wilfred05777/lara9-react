@@ -15,7 +15,7 @@ const ShowProducts = () => {
 
   const getAllProducts = async () => {
     const response = await axios.get(`${endpoint}/products`);
-    setProducts(response);
+    setProducts(response.data);
   };
 
   const deleteProduct = async (id) => {
@@ -33,8 +33,8 @@ const ShowProducts = () => {
           Create
         </Link>
       </div>
-      <table>
-        <thead className="table table-stripped">
+      <table className="table table-striped">
+        <thead className="bg-primary text-white">
           <tr>
             <th>Description</th>
             <th>Price</th>
@@ -43,7 +43,25 @@ const ShowProducts = () => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product) => {
+          {/* {products.map((product) => (
+            <tr key={product.id}>
+              <td> {product.description} </td>
+              <td> {product.price} </td>
+              <td> {product.stock} </td>
+              <td>
+                <Link to={`/edit/${product.id}`} className="btn btn-warning">
+                  Edit
+                </Link>
+                <button
+                  onClick={() => deleteProduct(product.id)}
+                  className="btn btn-danger"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))} */}
+          {products.map((product) => (
             <tr key={product.id}>
               <td>{product.description}</td>
               <td>{product.price}</td>
@@ -59,8 +77,8 @@ const ShowProducts = () => {
                   Delete
                 </button>
               </td>
-            </tr>;
-          })}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
