@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const endpoint = "http://localhost:8000/api/product";
 
@@ -19,6 +20,8 @@ const CreateProduct = () => {
       price: price,
       stock: stock,
     });
+    toast.success("Successfully Created a Product");
+
     navigate("/");
   };
 

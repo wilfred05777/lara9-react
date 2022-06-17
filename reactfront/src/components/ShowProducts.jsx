@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const endpoint = "http://localhost:8000/api";
 
 const ShowProducts = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getAllProducts();
@@ -21,6 +23,8 @@ const ShowProducts = () => {
   const deleteProduct = async (id) => {
     axios.delete(`${endpoint}/product/${id}`);
     getAllProducts();
+    toast.success("Successfully Deleted Product");
+    navigate(`/`);
   };
 
   return (
